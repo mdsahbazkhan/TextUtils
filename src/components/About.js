@@ -6,12 +6,12 @@ export default function About(props) {
     color: "black",
     backgroundColor: "white",
   });
-  const [btntext, setBtntext] = useState("Enable Dark Mode");
+  const [ ,setBtntext] = useState("Enable Dark Mode");
   useEffect(() => {
     if (props.mode === "dark") {
       setmyStyle({
         color: "white",
-        backgroundColor: "#235e69",
+        backgroundColor: "rgb(30 78 117)",
         border: "2px solid white",
       });
       setBtntext("Enable Light Mode");
@@ -24,11 +24,11 @@ export default function About(props) {
       // setBtntext("Enable Dark Mode");
     }
   }, [props.mode]);
-  const toggleStyle = () => {};
+ 
 
   return (
-    <div className="container" style={myStyle}>
-      <h1 className="my-2">About Us</h1>
+    <div className="container"  >
+      <h1 className="my-2 " style={{color:props.mode ==='dark'?'white':'#042743'}}  >About Us</h1>
       <div className="accordion " id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
@@ -41,7 +41,7 @@ export default function About(props) {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+            <strong>Analyze Your text</strong> 
             </button>
           </h2>
           <div
@@ -51,14 +51,7 @@ export default function About(props) {
             style={myStyle}
           >
             <div className="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              TextUtils gives you a way to analyze your text quickly and efficiently. Be it word count, character count or 
             </div>
           </div>
         </div>
@@ -73,7 +66,7 @@ export default function About(props) {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+             <strong>Free to use</strong>
             </button>
           </h2>
           <div
@@ -83,11 +76,7 @@ export default function About(props) {
             style={myStyle}
           >
             <div className="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is
-              hidden by default, until the collapse style each element. These
-              classes control the overall appearance, as well as the showing and
-              hiding via CSS transitions. You can modify any of this with custom
-              CSS or overriding our default variables.
+              TextUtils is free character counter tools that provides instant character count & owrd count statisics for a given text. TextUtils reports the number of words and character. thus it is suitable for writing text with word/ character limit.
             </div>
           </div>
         </div>
@@ -102,7 +91,7 @@ export default function About(props) {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+             <strong>Browser Compatible</strong>
             </button>
           </h2>
           <div
@@ -112,14 +101,7 @@ export default function About(props) {
             style={myStyle}
           >
             <div className="accordion-body">
-              <b> This is the third item's accordion body.</b> It is hidden by
-              default, until the collapse plugin adds the appropriate classes
-              that we use to style each element. These classes control the
-              overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This word counter software works in any web browser such as Chrome, Firefox, Internet Explorer, Safari,Opera. It suits to count character in facebook,blog, books, excel document ,essays,etc.
             </div>
           </div>
         </div>
